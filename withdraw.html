@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Withdraw</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Withdraw Funds</h1>
+
+    <form>
+      <label for="amount">Amount (USD):</label>
+      <input type="number" id="amount" required>
+
+      <label for="method">Withdraw Method:</label>
+      <select id="method" required>
+        <option value="">-- Select Method --</option>
+        <option value="bkash">bKash</option>
+        <option value="nagad">Nagad</option>
+        <option value="binance">Binance</option>
+      </select>
+
+      <label for="account">Account Number / Binance ID:</label>
+      <input type="text" id="account" required>
+
+      <button type="submit">Withdraw</button>
+    </form>
+
+    <p id="message"></p>
+  </div>
+
+  <script>
+    const form = document.querySelector("form");
+    const message = document.getElementById("message");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      message.innerText = "✅ Withdrawal request submitted. Please wait up to 72 hours.";
+      form.reset();
+    });
+  </script>
+</body>
+</html>
