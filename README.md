@@ -18,3 +18,6 @@ Dollar Drop official frontend files
 - ✅ Messenger-based Support System
 
 ## 📁 Project Structure
+## ▶️ How to Run
+
+1. এই প্রজেক্টটি আপনার লোকাল মেশিনে ক্লোন করুন:
