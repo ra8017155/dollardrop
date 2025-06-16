@@ -5,6 +5,38 @@
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Dollar Drop</title>
   <link rel="stylesheet" href="styles.css"/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f4f4f4;
+      padding: 40px;
+    }
+
+    header h1 {
+      color: #2c3e50;
+    }
+
+    button {
+      margin: 10px;
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #0070f3;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0058c1;
+    }
+
+    footer {
+      margin-top: 40px;
+      color: #888;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -27,6 +59,26 @@
 
   <footer>&copy; 2025 Dollar Drop</footer>
 
-<script src="script.js"></script>
+  <script>
+    function openLink() {
+      window.open("https://m.me/demo.transaction.agent", "_blank");
+    }
+
+    let isBangla = false;
+    function toggleLang() {
+      isBangla = !isBangla;
+      if (isBangla) {
+        document.getElementById("d1").innerText = "ডিপোজিট";
+        document.getElementById("d2").innerText = "একটি পদ্ধতি নির্বাচন করুন, তারপর অ্যাডমিনের সাথে মেসেঞ্জারে চ্যাট করুন।";
+        document.getElementById("w1").innerText = "উইথড্র";
+        document.getElementById("w2").innerText = "সর্বনিম্ন $5 | ১০% চার্জ | প্রতি মাসে ৩ বার";
+      } else {
+        document.getElementById("d1").innerText = "Deposit";
+        document.getElementById("d2").innerText = "Select a method then chat with admin in Messenger.";
+        document.getElementById("w1").innerText = "Withdraw";
+        document.getElementById("w2").innerText = "Min $5 | 10 % fee | 3 times/month";
+      }
+    }
+  </script>
 </body>
 </html>
